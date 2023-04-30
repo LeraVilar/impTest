@@ -27,7 +27,7 @@ window.onload = function() {
     , fit: true
     , center: 1
     , beforePan: beforePan
-    , minZoom: 1
+    , minZoom: 1.1
     , viewportSelector: '#wrapper'
     });
 
