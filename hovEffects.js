@@ -33,6 +33,9 @@ function openDesc (num) {
         desc.classList.remove('__active')
     })
 }
+function closeFilter () {
+    document.querySelector('.filter-window').classList.toggle('__hidden')
+}
 
 filters.forEach(filter => {
     filter.addEventListener('change', function(event) {
