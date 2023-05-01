@@ -12,6 +12,10 @@ body {
     min-width: 100vw;
     min-height: 100vh;
 }
+img {
+    width: 100%;
+    height: auto;
+}
 svg {
     min-width: 100%;
     min-height: 100%;
@@ -26,7 +30,18 @@ svg {
     color: #FFF;
     background: #364461;
     border-radius: 15px;
-    padding: 5px 10px 20px;
+    padding: 25px 20px 20px;
+    transform: translate(-150%);
+    transition: 1s all;
+}
+.desc-window.__active {
+    transform: translate(0);
+}
+.desc-window span {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
 }
 .filter-window {
     position: fixed;
@@ -47,4 +62,24 @@ svg {
     display: block;
     font-size: 18px;
     margin: 15px 0;
+}
+.control-elems {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-100%, 100%);
+    padding: 20px;
+    background-color: #364461;
+}
+.build {
+    transition: .5s all;
+}
+.build:hover {
+    fill-opacity: 0.65;
+}
+/* path.pin[data-num="b6"]:hover {
+    fill-opacity: 0.5;
+} */
+g.pin.__disabled {
+    display: none;
 }
