@@ -23,7 +23,7 @@ window.onload = function() {
     // Expose to window namespace for testing purposes
     window.panZoom = svgPanZoom('#map', {
       zoomEnabled: true
-    , controlIconsEnabled: false
+    , controlIconsEnabled: true
     , fit: true
     , center: 1
     , beforePan: beforePan
