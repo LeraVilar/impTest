@@ -39,14 +39,21 @@ function closeFilter () {
 
 filters.forEach(filter => {
     filter.addEventListener('change', function(event) {
-
         console.log(event.target.dataset.filter)
+        console.log(event)
+        
         if(event.target.checked == true) {
-            filterArr.push(...event.target.dataset.filter.split(','))
+            disOther()
+            event.target.checked = true
+            filterArr = [...event.target.dataset.filter.split(',')]
+            console.log(filterArr)
             fFunc(filterArr)
 
         }else {
+            event.target.checked = true
+            disOther()
             filterArr = removeItems(filterArr,[...event.target.dataset.filter.split(',')])
+            console.log(filterArr)
             fFunc(filterArr)
 
         }
@@ -66,11 +73,11 @@ function fFunc (farr) {
             f.classList.add('__active')
         })
     })
-    if(farr.length == 0) {
-        return
-    }else {
-        dis()
-    }
+    // if(farr.length == 0) {
+    //     return
+    // }else {
+    //     dis()
+    // }
 }
 
 
@@ -80,15 +87,20 @@ function removeItems (array, itemsToRemove) {
       });
   } 
 
-function dis () {
-    pins.forEach(pin => {
-        if(!pin.classList.contains('__active')){
-            pin.classList.add('__disabled')
-        }
-    })
-    builds.forEach(build => {
-        if(!build.classList.contains('__active')){
-            build.classList.add('__disabled')
-        }
+function disOther () {
+    filters.forEach(filter => {
+        filter.checked = false
     })
 }
+// function dis () {
+//     pins.forEach(pin => {
+//         if(!pin.classList.contains('__active')){
+//             pin.classList.add('__disabled')
+//         }
+//     })
+//     builds.forEach(build => {
+//         if(!build.classList.contains('__active')){
+//             build.classList.add('__disabled')
+//         }
+//     })
+// }

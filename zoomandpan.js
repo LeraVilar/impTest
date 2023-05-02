@@ -3,7 +3,7 @@ window.onload = function() {
 
     beforePan = function(oldPan, newPan){
       var stopHorizontal = false
-        , stopVertical = false
+        , stopVertical = true
         , gutterWidth = this.getSizes().width
         , gutterHeight = this.getSizes().height
           // Computed variables
@@ -25,10 +25,10 @@ window.onload = function() {
       zoomEnabled: true
     , controlIconsEnabled: true
     , fit: true
-    // , center: 1
+    , center: 1
     , beforePan: beforePan
-    , minZoom: 1.0
-    // , viewportSelector: 'body'
+    , minZoom: 1
+    // , viewportSelector: '.wrapper'
     });
 
     // panZoom.setBeforePan(beforePan)

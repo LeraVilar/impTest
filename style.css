@@ -16,14 +16,18 @@ img {
     width: 100%;
     height: auto;
 }
-svg {
-    min-width: 100%;
+svg#map {
+    /* min-width: 100%;
     min-height: 100%;
     max-width: 100vw;
     max-height: 100vh;
-    height: 100vh;
+    height: 100vh; */
+    transform: scale(1.14, 1.051) translate(5%, 0);
     position: relative;
     /* object-fit: cover; */
+}
+#map g:first-child {
+    width: 100%;
 }
 .desc-window {
     position: fixed;
@@ -54,7 +58,7 @@ svg {
 }
 .filter-window {
     position: fixed;
-    top: 15px;
+    bottom: 15px;
     right: 15px;
     width: 15%;
     /* height: 200px; */
@@ -94,8 +98,11 @@ svg {
 /* path.pin[data-num="b6"]:hover {
     fill-opacity: 0.5;
 } */
-g.pin.__disabled, .build.__disabled{
+.pin, .build {
     display: none;
+}
+g.pin.__active, .build.__active{
+    display: block;
 }
 .cont {
     max-height: 90vh;
