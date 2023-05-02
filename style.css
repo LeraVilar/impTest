@@ -19,6 +19,9 @@ img {
 svg {
     min-width: 100%;
     min-height: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
+    height: 100vh;
     position: relative;
     /* object-fit: cover; */
 }
@@ -31,7 +34,7 @@ svg {
     background: #364461;
     border-radius: 15px;
     padding: 25px 20px 20px;
-    transform: translate(-150%);
+    transform: translateY(-150%);
     transition: 1s all;
 }
 .desc-window.__active {
@@ -91,7 +94,7 @@ svg {
 /* path.pin[data-num="b6"]:hover {
     fill-opacity: 0.5;
 } */
-g.pin.__disabled {
+g.pin.__disabled, .build.__disabled{
     display: none;
 }
 .cont {

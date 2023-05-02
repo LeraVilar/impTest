@@ -25,10 +25,10 @@ window.onload = function() {
       zoomEnabled: true
     , controlIconsEnabled: true
     , fit: true
-    , center: 1
+    // , center: 1
     , beforePan: beforePan
-    , minZoom: 1.1
-    , viewportSelector: '#wrapper'
+    , minZoom: 1.0
+    // , viewportSelector: 'body'
     });
 
     // panZoom.setBeforePan(beforePan)

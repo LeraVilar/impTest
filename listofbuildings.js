@@ -85,6 +85,14 @@ const gigaArr = {
     <br>
     <p>После капитального ремонта и полного переоснащения планируется открытие терапевтического отделения с палатами повышенной комфортности./p>
     `,
+    b88: `
+    <img src="https://mos.surgery/wp-content/uploads/2020/02/8str.jpg">
+    <h2>8 СТРОЕНИЕ - пищеблок</h2>
+    <p>Площадь - 3 043,4 кв.м.</p>
+    <p>Год постройки - 1922</p>
+    <p>Начало капитального ремонта - июнь 2020 года</p>
+    <p>Завершение капитального ремонта - декабрь 2020 года</p>
+    `,
     b9: `
     <img src="https://mos.surgery/wp-content/uploads/2017/06/9.jpg">
     <h2>9 КОРПУС - хирургический</h2>
@@ -430,4 +438,8 @@ const gigaArr = {
     <img src="https://mos.surgery/wp-content/uploads/2020/02/skp-4-stage.jpg">
     <img src="https://mos.surgery/wp-content/uploads/2020/02/skp-5-stage.jpg">
     `,
+    parkingnew: `
+    <img src="./parking.jpg">
+    <h2>Парковка</h2>
+    `
 }
